@@ -1,0 +1,39 @@
+from ctypes import util
+from multiprocessing.connection import wait
+from os import wait3
+from this import d
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC 
+from selenium.webdriver.chrome.options import Options
+from PIL import Image
+
+##Variable
+driver = webdriver.Chrome()
+driver.get("https://www.officemate.co.th/en")
+searchbox = driver.find_element(by=By.XPATH, value='//*[@id="app"]/div[2]/div[1]/div/div[1]/div[1]/div[1]/input')
+_btnsearch = driver.find_element(By.ID, value='btn-searchResultPage')
+
+
+
+#Test case
+#Open browser : https://www.officemate.co.th/en
+#Input "Chair" on Search box
+#Click Search
+#Web display all product about keyword "Chair"
+
+
+
+#Keyword
+#_btnCloseAD.click()
+driver.maximize_window
+searchbox.click()
+searchbox.send_keys("Chair")
+_btnsearch.click()
+
+#driver.close()  
+
+
+
